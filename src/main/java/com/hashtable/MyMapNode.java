@@ -26,7 +26,7 @@ public class MyMapNode<K, V> implements INode<K> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public void setNext(INode next) {
+	public void setNext(@SuppressWarnings("rawtypes") INode next) {
 		this.next = (MyMapNode<K, V>) next;
 	}
 
