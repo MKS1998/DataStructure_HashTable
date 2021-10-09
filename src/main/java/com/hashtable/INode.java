@@ -1,13 +1,12 @@
 package com.hashtable;
 
+
 public interface INode<K> {
     K getKey();
 
     void setKey(K key);
 
-    @SuppressWarnings("rawtypes")
-	INode getNext();
+    INode<?> getNext();
 
-    @SuppressWarnings("rawtypes")
-	void setNext(INode next);
+    void setNext(INode<?> next);
 }

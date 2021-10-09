@@ -1,7 +1,7 @@
 package com.hashtable;
 
 public class MyLinkedList<K> {
-	public INode<K> head;
+	public INode<?> head;
 	public INode<K> tail;
 
 	public MyLinkedList() {
@@ -23,16 +23,14 @@ public class MyLinkedList<K> {
 
 	}
 
-	@SuppressWarnings("unchecked")
-	public INode<K> pop(INode<K> deleteNode) {
-		INode<K> tempNode = this.head;
+	public INode<?> pop(INode<K> deleteNode) {
+		INode<?> tempNode = this.head;
 		this.head = head.getNext();
 		return tempNode;
 	}
 
-	@SuppressWarnings("unchecked")
-	public INode<K> search(K key) {
-		INode<K> tempNode = head;
+	public INode<?> search(K key) {
+		INode<?> tempNode = head;
 		while (tempNode != null && tempNode.getNext() != null) {
 			if (tempNode.getKey().equals(key)) {
 				return tempNode;
